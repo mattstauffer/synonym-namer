@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "22e2d40bd0ae5a097db3f8de46ab5f5d",
+    "hash": "026a50fdfe7cb1fe3469f2542d7f4b27",
     "packages": [
         {
             "name": "danielstjules/stringy",
@@ -1225,13 +1225,13 @@
             "version": "5.0.x-dev",
             "source": {
                 "type": "git",
-                "url": "git@github.com:laravel/lumen-framework.git",
-                "reference": "3eee4d70798ed96a02bc29512d640cdc87baf887"
+                "url": "https://github.com/laravel/lumen-framework.git",
+                "reference": "4f959beccc85b2060ed6c4c58048f21e4eec3f1d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/lumen-framework/zipball/3eee4d70798ed96a02bc29512d640cdc87baf887",
-                "reference": "3eee4d70798ed96a02bc29512d640cdc87baf887",
+                "url": "https://api.github.com/repos/laravel/lumen-framework/zipball/4f959beccc85b2060ed6c4c58048f21e4eec3f1d",
+                "reference": "4f959beccc85b2060ed6c4c58048f21e4eec3f1d",
                 "shasum": ""
             },
             "require": {
@@ -1289,6 +1289,7 @@
                     "src/helpers.php"
                 ]
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1305,11 +1306,7 @@
                 "laravel",
                 "lumen"
             ],
-            "support": {
-                "issues": "https://github.com/laravel/lumen-framework/issues",
-                "source": "https://github.com/laravel/lumen-framework"
-            },
-            "time": "2015-04-14 01:47:14"
+            "time": "2015-04-15 18:39:15"
         },
         {
             "name": "league/flysystem",
