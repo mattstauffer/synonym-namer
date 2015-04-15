@@ -12,8 +12,7 @@ $app->get('/{adjective}/brad', function ($adjective) {
             $url = sprintf("http://words.bighugelabs.com/api/2/%s/%s/json", $apiKey, urlencode($adjective));
             $result = json_decode(file_get_contents($url));
             $synonyms = $result->adjective->syn;
-            $related = $result->adjective->rel;
-
+            // $related = $result->adjective->rel;
             // @todo join uniques between synonyms and related
 
             return $synonyms;
