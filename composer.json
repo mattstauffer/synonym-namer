@@ -13,11 +13,5 @@
         "classmap": [
             "tests/"
         ]
-    },
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "http://airship.laravel.com"
-        }
-    ]
+    }
 }
