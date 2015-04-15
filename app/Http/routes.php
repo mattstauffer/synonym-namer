@@ -9,7 +9,7 @@ $app->get('/{adjective}/brad', function ($adjective) {
         $cacheTtl,
         function() use ($adjective, $apiKey)
         {
-            $url = "http://words.bighugelabs.com/api/2/{$apiKey}/{urlencode($adjective)}/json";
+            $url = sprintf("http://words.bighugelabs.com/api/2/%s/%s/json", $apiKey, urlencode($adjective));
             $result = json_decode(file_get_contents($url));
             $synonyms = $result->adjective->syn;
             $related = $result->adjective->rel;
