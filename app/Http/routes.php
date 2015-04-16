@@ -1,6 +1,10 @@
 <?php
+$app->get('/', function() {
+    // Not using redirect() because it uses session
+    return new Illuminate\Http\RedirectResponse('happy/brad');
+});
 
-$app->get('/{adjective}/brad', function ($adjective) {
+$app->get('/{adjective}/{name}', function ($adjective, $name) {
     $apiKey = getenv('THESAURUS_KEY');
     $cacheTtl = 0; // Forever cache, because synonym lists are likely never going to change
 
@@ -22,6 +26,6 @@ $app->get('/{adjective}/brad', function ($adjective) {
     $synonym = $synonyms[array_rand($synonyms)];
 
     return response([
-        'result' => ucwords($synonym) . ' Brad'
+        'result' => ucwords($synonym) . ' ' . ucwords($name)
     ]);
 });
