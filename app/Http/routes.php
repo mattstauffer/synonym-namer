@@ -6,11 +6,9 @@ $app->get('/', function() {
 
 $app->get('/{adjective}/{name}', function ($adjective, $name) {
     $apiKey = getenv('THESAURUS_KEY');
-    $cacheTtl = 0; // Forever cache, because synonym lists are likely never going to change
 
-    $synonyms = Cache::remember(
+    $synonyms = Cache::rememberForever(
         $adjective,
-        $cacheTtl,
         function() use ($adjective, $apiKey)
         {
             $url = sprintf("http://words.bighugelabs.com/api/2/%s/%s/json", $apiKey, urlencode($adjective));
